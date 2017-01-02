@@ -3,9 +3,11 @@ nl:
     form:
       facebook: Facebook berichtgeving
       seo_override_og_title: Titel Facebook bericht
-      seo_override_og_title_help: Als u de standaard titel van het Facebook bericht wilt wijzigen, kunt u hier een alternatief invullen.
-      og_description_title: Het Facebook bericht indien anders dan de Meta omschrijving
+      seo_override_og_title_help: 'Als u de standaard titel van het Facebook bericht wilt wijzigen, kunt u hier een alternatief invullen.'
+      og_description: Het Facebook bericht indien anders dan de Meta omschrijving
       og_description_help: Dit bericht verschijnt bij de afbeelding die Facebook toont van uw webpagina.
+      og_image: De afbeelding bij het Facebook bericht
+      og_image_help: Zonder specifieke afbeelding zal Facebook zelf een afbeelding uit de website laten zien indien aanwezig.
 
   refinery:
     plugins:

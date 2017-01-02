@@ -10,7 +10,9 @@ module SeoMeta
         :browser_title => :string,
         :meta_description => :text,
         :og_title => :string,
-        :og_description => :text
+        :og_description => :text,
+        :og_image_id => :integer,
+        :og_image => :integer
       }
     end
   end
