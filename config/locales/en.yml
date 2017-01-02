@@ -1,0 +1,13 @@
+en:
+  facebook_meta:
+    form:
+      facebook: Facebook messages
+      seo_override_og_title: Title Facebook message
+      seo_override_og_title_help: Optionally override the default title of the Facebook message.
+      og_description_title: The Facebook message text to override the default meta description
+      og_description_help: This message appears along side the image of your website
+
+  refinery:
+    plugins:
+      refinery_facebook_meta:
+        tab_name:       Facebook meta
