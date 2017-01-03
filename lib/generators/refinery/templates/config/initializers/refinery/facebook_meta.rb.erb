@@ -1,3 +1,7 @@
 Refinery::FacebookMeta.configure do |config|
+  # Your Facebook app ID in order to use Facebook Domain Insights
   # config.fb_app_id = <%= Refinery::FacebookMeta.fb_app_id.inspect %>
+
+  # Facebook OpenGraph types to use. Defaults to <%= Refinery::FacebookMeta.og_types.inspect %>
+  # config.og_types = <%= Refinery::FacebookMeta.og_types.inspect %>
 end

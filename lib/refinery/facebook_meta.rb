@@ -12,7 +12,8 @@ module SeoMeta
         :og_title => :string,
         :og_description => :text,
         :og_image_id => :integer,
-        :og_image => :integer
+        :og_image => :integer, 
+        :og_type => :string
       }
     end
   end

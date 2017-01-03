@@ -35,18 +35,19 @@ See config/initializers/refinery/facebook-meta.rb
 
 The FacebookMeta tags are an extension to the SeoMeta tags that exists by default on Refinery pages.
 
-To add Facebook mega tags - or any other default SEO meta tags - to custom extension objects, just use the #is_seo_meta declaration in your model. Do not forget to add the meta properties :og_title, :og_description, :og_image_id to you permitted_parameters in the extension controller.
+To add Facebook mega tags - or any other default SEO meta tags - to custom extension objects, just use the #is_seo_meta declaration in your model. Do not forget to add the meta properties :og_title, :og_description, :og_image_id, :og_type to you permitted_parameters in the extension controller.
+
+FacebookMeta will use the @canonical path to build the og:url. Do not forget to set this variable in your custom extensions.
 
 To show them in every page of your website when available just include the following line in the refinery/_head.html view. 
 ```erb
 <%= render 'facebook_meta_tags' %>
 ```
 
-To include the Facebook Javascript API code on every page include the following line in your layouts/application.html layout.
+To include the Facebook Javascript API code on every page include the following line in your layouts/application.html layout, just beneath your opening BODY tag. You must provide a Facebook App ID to use it. See config/initializers/facebook_meta.rb
 ```erb
-<%= render 'facebook_meta_js' if @meta.present? && Refinery::FacebookMeta.config.fb_app_id.present? %>
+<%= render 'facebook_meta_js' %>
 ```
-
 
 ## License
 

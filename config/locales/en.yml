@@ -2,9 +2,11 @@ en:
   facebook_meta:
     form:
       facebook: Facebook messages
-      seo_override_og_title: Title Facebook message
-      seo_override_og_title_help: Optionally override the default title of the Facebook message.
-      og_description: The Facebook message text to override the default meta description
+      og_type: Message type
+      og_type_help: The message type tells Facebook how to display the message (defaults to 'website')
+      og_title: Message title
+      og_title_help: Optionally override the default title of the Facebook message.
+      og_description: The short Facebook message text to override the default meta description
       og_description_help: This message appears along side the image of your website
       og_image: The image which Facebook should show
       og_image_help: Without an image Facebook will select an image on its own from the webpage if any
