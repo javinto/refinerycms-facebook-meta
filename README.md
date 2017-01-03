@@ -1,6 +1,6 @@
 # RefinerycmsFacebookMeta
 
-__An RefineryCMS 3.x extension to add Facebook Open Graph meta tags__
+__A RefineryCMS 3.x extension to add Facebook Open Graph meta tags__
 
 ## Requirements
 
@@ -8,7 +8,7 @@ __An RefineryCMS 3.x extension to add Facebook Open Graph meta tags__
 
 ## Features
 
-* Add Facebooks og_title, og_description and og_image tags to pages and extension objects
+* Add Facebooks og:title, og:description, og:image, og:type, og:url, fb:app_id, og:locale tags to pages and extension objects
 * Load Facebook API Javascript code with custom APP ID
 
 ## Install
@@ -16,7 +16,7 @@ __An RefineryCMS 3.x extension to add Facebook Open Graph meta tags__
 Add this line to your application's `Gemfile`
 
 ```ruby
-gem 'refinerycms-facebook-meta', '~> 0.0.1', github: "refinery/refinerycms-facebook-meta", branch: "master"
+gem 'refinerycms-facebook-meta', github: "javinto/refinerycms-facebook-meta", branch: "master"
 ```
 
 Next run
@@ -35,7 +35,7 @@ See config/initializers/refinery/facebook-meta.rb
 
 The FacebookMeta tags are an extension to the SeoMeta tags that exists by default on Refinery pages.
 
-To add Facebook mega tags - or any other default SEO meta tags - to custom extension objects, just use the #is_seo_meta declaration in your model. Do not forget to add the meta properties :og_title, :og_description, :og_image_id, :og_type to you permitted_parameters in the extension controller.
+To add Facebook mega tags - or any other default SEO meta tags - to custom extension objects, just use the #is_seo_meta declaration in your model. Do not forget to add the meta properties :og_title, :og_description, :og_image_id, :og_type to your permitted_parameters in the extension controller.
 
 FacebookMeta will use the @canonical path to build the og:url. Do not forget to set this variable in your custom extensions.
 
@@ -51,4 +51,4 @@ To include the Facebook Javascript API code on every page include the following 
 
 ## License
 
-Refinery is released under the MIT license. See the [license.md file](license.md#readme) for details.
+Refinery is released under the MIT license.
