@@ -32,6 +32,11 @@ module Refinery
       def factory_paths
         @factory_paths ||= [ root.join('spec', 'factories').to_s ]
       end
+
+      # Return Facebooks SKD version in 'lng_CNT' format
+      def skd_locale_version
+        self.config.skd_locales[::I18n.locale].presence || "#{::I18n.locale}_#{::I18n.locale.upcase}"
+      end
     end
 
     require 'refinery/facebook_meta/engine'
