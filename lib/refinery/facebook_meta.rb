@@ -33,9 +33,9 @@ module Refinery
         @factory_paths ||= [ root.join('spec', 'factories').to_s ]
       end
 
-      # Return Facebooks SKD version in 'lng_CNT' format
+      # Return Facebooks SDK version in 'lng_CNT' format
       def skd_locale_version
-        self.config.skd_locales[::I18n.locale].presence || "#{::I18n.locale}_#{::I18n.locale.upcase}"
+        self.config.sdk_locales[::I18n.locale].presence || "#{::I18n.locale}_#{::I18n.locale.upcase}"
       end
     end
 
