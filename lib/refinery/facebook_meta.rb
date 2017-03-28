@@ -34,7 +34,7 @@ module Refinery
       end
 
       # Return Facebooks SDK version in 'lng_CNT' format
-      def skd_locale_version
+      def sdk_locale_version
         self.config.sdk_locales[::I18n.locale].presence || "#{::I18n.locale}_#{::I18n.locale.upcase}"
       end
     end
