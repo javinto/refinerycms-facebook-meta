@@ -1,4 +1,4 @@
-<% if @meta.present? %>
+<% if @meta.try(:model).present? %>
 <%= tag :meta, property: "og:locale", content: "#{Refinery::FacebookMeta.config.sdk_locales[I18n.locale]}" if Refinery::FacebookMeta.config.sdk_locales.has_key?(I18n.locale) %>
 <%= tag :meta, property: "og:type", content: "#{@meta.og_type}" if @meta.og_type.present? %>
 <%= tag :meta, property: "og:url", content: "#{ActionDispatch::Http::URL.full_url_for( host: request.host, port: request.optional_port, protocol: request.protocol, path: @canonical)}" if @canonical.present? %>
