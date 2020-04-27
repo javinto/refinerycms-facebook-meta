@@ -1,19 +1,16 @@
 <% if @meta.present? && Refinery::FacebookMeta.config.fb_app_id.present? %>
+
   <script>
     window.fbAsyncInit = function() {
       FB.init({
-        appId      : '<%= Refinery::FacebookMeta.config.fb_app_id %>',
-        xfbml      : true,
-        version    : 'v3.2'
+        appId            : '<%= Refinery::FacebookMeta.config.fb_app_id %>',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v6.0'
       });
     };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/<%= Refinery::FacebookMeta.sdk_locale_version %>/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
   </script>
+  <script id='fb-sdk' async defer src="https://connect.facebook.net/<%= Refinery::FacebookMeta.sdk_locale_version %>/sdk.js"></script>
+
 <% end %>
+
